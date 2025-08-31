@@ -16,7 +16,7 @@
     // Parse path like /20000,30000,54000
     const params = new URLSearchParams(window.location.search);
     const raw = params.get('values') || '';
-    const numbers = raw.split(',').map(x => parseFloat(x)).filter(x => !isNaN(x));
+    const numbers = raw.split('-').map(x => parseFloat(x)).filter(x => !isNaN(x));
     const sum = numbers.reduce((a, b) => a + b, 0);
 
     // Show on page
